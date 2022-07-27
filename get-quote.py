@@ -1,11 +1,11 @@
 import random
 
 def primary():
+
   print("Keep it logically awesome.")
 
-  f = open("quotes.txt")
-  quotes = f.readlines()
-  f.close()
+  with open("quotes.txt") as f:
+    quotes = f.readlines()
 
   last = last = len(quotes) - 1
   rnd = random.randint(0, last)
